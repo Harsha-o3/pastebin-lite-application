@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Paste {
+  id            String    @id @default(cuid())
+  content       String
+  created_at    DateTime  @default(now())
+  expires_at    DateTime?
+  max_views     Int?
+  current_views Int       @default(0)
+
+  @@index([id])
+}
