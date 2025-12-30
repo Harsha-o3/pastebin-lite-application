@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { prisma } from "@/lib/prisma";
 import { getCurrentTime } from "@/lib/utils/time";
 import { NextResponse } from "next/server";
